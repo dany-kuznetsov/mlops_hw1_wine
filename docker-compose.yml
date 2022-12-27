@@ -18,7 +18,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: python main.py
+    command: python scripts/app.py
     container_name: api_service
     ports:
       - "5000:5000"

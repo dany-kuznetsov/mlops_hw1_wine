@@ -1,4 +1,4 @@
-import models_module
+from scripts import models_module
 import pandas as pd
 
 

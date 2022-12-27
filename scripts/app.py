@@ -1,6 +1,6 @@
 # Imports
 from flask import Flask
-from flask_restx import Api, Resource, fields
+from flask_restx import Api, Resource
 
 import pandas as pd
 import json
@@ -21,7 +21,7 @@ feature_cols = [
 y_col = 'quality'
 
 # Directory for models
-model_dir = Path('models')
+model_dir = Path('../models')
 model_dir.mkdir(exist_ok=True)
 
 app = Flask(__name__)
@@ -131,8 +131,8 @@ class SavedModelsList(Resource):
     @api.response(200, 'Success')
     @api.response(500, 'Internal Server Error')
     def get(self):
-        if os.path.exists('models'):
-            return [x for x in os.listdir('models/') if '.pkl' in x]
+        if os.path.exists('../models'):
+            return [x for x in os.listdir('../models/') if '.pkl' in x]
         else:
             return 500, 'models directory does not exist'
 
