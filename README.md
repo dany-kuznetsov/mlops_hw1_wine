@@ -26,11 +26,14 @@ docker images
 ```shell
 docker-compose config
 ```
-- Запуститб докер компоуз
+- Запустить докер компоуз
 ```shell
 docker-compose up -d
 ```
-- Остановить все процессы
+- Остановить
 ```shell
 docker-compose down
 ```
+
+## Тесты
+Чтобы запутсить тесты, я в терминале пишу pytest
